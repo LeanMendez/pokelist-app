@@ -15,6 +15,7 @@ export const HomePage = () => {
   };
 
   const nextPage = () => {
+      if(pokemons.filter(poke => poke.name.includes(search)).length > currentPage + 10)
     setCurrentPage(currentPage + 10);
   };
   const previusPage = () => {
